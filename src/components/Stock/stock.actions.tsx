@@ -3,7 +3,7 @@ import { stockService } from '../../services';
 import { SearchFormValues, StockSymbolDay } from './stock.types';
 
 export const stockActions = {
-    getData
+	getData
 };
 
 function failure(error: string) { return { type: stockConstants.REQUEST_FAILURE, error } }
@@ -21,7 +21,7 @@ const prepareChartData = (formValues: { startDate: string, endDate: string }, co
 			companyDay.low = parseFloat(el['3. low']);
 			companyDay.open = parseFloat(el['1. open']);
 			companyDay.close = parseFloat(el['4. close']);
-			companyDay.volume = parseInt(typeof el['5. volume'] === "undefined"?el['6. volume']:el['5. volume']);
+			companyDay.volume = parseInt(typeof el['5. volume'] === "undefined" ? el['6. volume'] : el['5. volume']);
 			newData.push(companyDay);
 		}
 	})
@@ -29,12 +29,12 @@ const prepareChartData = (formValues: { startDate: string, endDate: string }, co
 	newData.sort(function (a: { [key: string]: any }, b: { [key: string]: any }) {
 		return a.date > b.date ? 1 : -1;
 	})
-	
+
 	return {
 		type: stockConstants.SET_CHART_DATA,
 		chartData: newData
 	};
-	
+
 };
 
 function loading(isLoading: Boolean) {
@@ -45,7 +45,7 @@ function loading(isLoading: Boolean) {
 }
 
 function getData(values: SearchFormValues) {
-	
+
 	return (dispatch: any, getState: any): any => {
 		dispatch(loading(true));
 		const companyData = getState().stocks.companies[values.company];
@@ -68,5 +68,5 @@ function getData(values: SearchFormValues) {
 					error => dispatch(failure(error.toString()))
 				);
 		}
-    };
+	};
 }
