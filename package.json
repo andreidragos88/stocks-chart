@@ -1,0 +1,52 @@
+{
+  "name": "shoreline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --progress",
+    "watch": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/d3": "^5.7.2",
+    "alphavantage": "^2.0.1",
+    "axios": "^0.19.2",
+    "axios-typescript": "^1.0.2",
+    "d3": "^5.15.1",
+    "npm-watch": "^0.6.0",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-flatpickr": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-flatpickr": "^3.8.1",
+    "@types/react-redux": "^7.1.7",
+    "css-loader": "^3.5.2",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-load-config": "^2.1.0",
+    "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^7.0.0",
+    "typesafe-actions": "^5.1.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

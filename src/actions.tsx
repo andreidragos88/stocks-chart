@@ -1,0 +1,1 @@
+export { stockActions } from './components/Stock/stock.actions'

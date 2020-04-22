@@ -1,0 +1,1 @@
+export { stockService } from './components/Stock/stock.service';
