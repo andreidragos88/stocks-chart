@@ -6,5 +6,5 @@ function getData(company: string): Promise<any> {
 }
 
 export const stockService = {
-	getData
+    getData
 };

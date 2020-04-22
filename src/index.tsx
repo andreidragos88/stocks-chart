@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import Stock from "./components/Stock/Stock";
 
 ReactDOM.render(
-	<Provider store={store}>
+    <Provider store={store}>
         <Stock>
         </Stock>
     </Provider>,
