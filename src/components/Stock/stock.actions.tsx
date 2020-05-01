@@ -15,14 +15,19 @@ const prepareChartData = (formValues: { startDate: string, endDate: string }, co
             (formValues.endDate == '' || (formValues.endDate != '' && key <= formValues.endDate))) {
 
             let el = companyData['Time Series (Daily)'][key];
-            let companyDay = {} as StockSymbolDay;
-            companyDay.date = new Date(key);
-            companyDay.high = parseFloat(el['2. high']);
-            companyDay.low = parseFloat(el['3. low']);
-            companyDay.open = parseFloat(el['1. open']);
-            companyDay.close = parseFloat(el['4. close']);
-            companyDay.volume = parseInt(typeof el['5. volume'] === "undefined" ? el['6. volume'] : el['5. volume']);
-            newData.push(companyDay);
+			let companyDay = {
+				date: new Date(key),
+				high: parseFloat(el['2. high']),
+				low: parseFloat(el['3. low']),
+				open: parseFloat(el['1. open']),
+				close: parseFloat(el['4. close']),
+				volume: parseInt(typeof el['5. volume'] === "undefined" ? el['6. volume'] : el['5. volume'])
+			} as StockSymbolDay;
+
+			newData = [
+				...newData,
+				companyDay
+			];
         }
     })
 
